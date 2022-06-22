@@ -1,4 +1,7 @@
-from dash import Dash, dcc, html, Input, Output, callback
+import dash as Dash
+from dash.dependencies import Input, Output
+import dash_html_components as html
+import dash_core_components as dcc
 from pages import Dashboard, inicio
 
 
@@ -37,7 +40,7 @@ app.layout = html.Div([
 ]) 
 
 
-@callback(Output('page-content', 'children'),
+@app.callback(Output('page-content', 'children'),
               Input('url', 'pathname'))
 def display_page(pathname):
     if pathname == '/inicio':
