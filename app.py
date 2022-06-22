@@ -5,7 +5,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
 
-import pandas as pd
+import pandas as pd 
 
 df = pd.read_csv('assets/data/gapminderDataFiveYear.csv')
 
